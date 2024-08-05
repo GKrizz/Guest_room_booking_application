@@ -3,6 +3,7 @@
 ## Project Overview
 
 **Guest Room Booking Application** is a platform designed to help house owners manage short-term rental bookings efficiently. It allows property owners to register their properties, manage room details, and set booking conditions. Customers can browse available rooms, view detailed information, and make bookings.
+For a complete and detailed guide, visit the [full documentation here](https://github.com/GKrizz/Guest_room_booking_application/blob/main/client/README.md).
 
 ### Features
 
