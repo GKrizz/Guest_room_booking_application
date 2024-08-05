@@ -1,5 +1,13 @@
 # Guest Room Booking Application - Cartrabbit
 
+**Project Title:** Guest Room Booking Application
+
+**Technologies Used:** 
+- **Frontend:** React.js
+- **Backend:** Node.js
+- **Database:** MongoDB Atlas
+
+
 ## Project Overview
 
 **Guest Room Booking Application** is a platform designed to help house owners manage short-term rental bookings efficiently. It allows property owners to register their properties, manage room details, and set booking conditions. Customers can browse available rooms, view detailed information, and make bookings.
@@ -150,4 +158,5 @@ Sample data files are located in the `sample` directory. To load sample data int
 3. **Post-Deployment**:
    - Ensure the MongoDB database is accessible and properly configured with your deployment environment.
    - Test the application to ensure it functions correctly in the production environment.
+
 
