@@ -140,23 +140,41 @@ Sample data files are located in the `sample` directory. To load sample data int
 3. **View Application**:
    - Navigate to `http://localhost:3000` in your web browser.
 
-## Deployment Instructions
+To display the screenshots in a compact grid format, you can use Markdown to align the images in rows and columns. Here's how you can update the **Screenshots** section:
 
-1. **Prepare for Deployment**:
-   - Ensure all environment variables are correctly set for the production environment.
-   - Create a production build of the client:
-     ```bash
-     cd client
-     npm run build
-     ```
+---
 
-2. **Deploying the Application**:
-   - Deploy the application using services like Heroku, AWS, or DigitalOcean.
-   - Deploy the server and client separately or together, based on your setup.
-   - For Heroku, push the code to your Heroku app repository and set environment variables in the Heroku dashboard.
+## Screenshots
 
-3. **Post-Deployment**:
-   - Ensure the MongoDB database is accessible and properly configured with your deployment environment.
-   - Test the application to ensure it functions correctly in the production environment.
+**Here are some screenshots of the application:**
 
+### Home Page
+![Home Page](https://github.com/user-attachments/assets/110f5ed2-7c34-40f5-9171-47ab415db044)
+
+### Available Rooms Page
+![Available Rooms Page](https://github.com/user-attachments/assets/ce18273a-393b-469b-ad1c-b111991eeefd)
+
+### Login Page
+| ![Login Page 1](https://github.com/user-attachments/assets/b89f307b-ddd5-42a2-a913-b87d883285bf) | ![Login Page 2](https://github.com/user-attachments/assets/b93be2a4-e2f6-4f2d-affa-e64ce116bb33) |
+|:--:|:--:|
+
+### Profile Page
+![Profile Page](https://github.com/user-attachments/assets/07673c73-8081-4a07-818a-fd3c750496a0)
+
+### Booking Room
+| ![Booking Room 1](https://github.com/user-attachments/assets/799fe5b9-7b63-4208-98d1-d11c61710a0f) | ![Booking Room 2](https://github.com/user-attachments/assets/267f8c7e-f9ba-4273-a934-0ed70fc1892c) |
+|:--:|:--:|
+| ![Booking Room 3](https://github.com/user-attachments/assets/2d70571d-2108-4ae7-9612-38c1aaccca0b) | ![Booking Room 4](https://github.com/user-attachments/assets/07364476-2871-4660-b2b8-afe3bd9a2f5f) |
+| ![Booking Room 5](https://github.com/user-attachments/assets/7c52eaf1-3c6e-47f7-a2e4-19e59713213e) |  |
+
+### Transaction and Database
+| ![Transaction](https://github.com/user-attachments/assets/e88225d1-0af1-40c0-93f3-96a2a0bb02da) | ![Database](https://github.com/user-attachments/assets/ecc26054-7eef-4fea-928f-a1295c9b7128) |
+|:--:|:--:|
+
+### Renting and User Details
+| ![Renting Details 1](https://github.com/user-attachments/assets/c253389c-d358-4904-b1e8-60e2550f477e) | ![Renting Details 2](https://github.com/user-attachments/assets/f2813d05-4221-41fb-8412-f980682aa5ea) |
+|:--:|:--:|
+| ![User Details 1](https://github.com/user-attachments/assets/68a87155-12db-4ce7-ab17-ce35e506fbf1) | ![User Details 2](https://github.com/user-attachments/assets/cbc7857b-1cba-4806-83fe-275689806ea0) |
+
+---
 
