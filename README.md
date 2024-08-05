@@ -144,8 +144,10 @@ To display the screenshots in a compact grid format, you can use Markdown to ali
 
 ---
 ## Demo Video
+**Watch the Demo Video of the application:**
 
-https://github.com/user-attachments/assets/16542309-0259-4d32-96ac-1b928be4fcd1
+[Demo Video](https://github.com/user-attachments/assets/16542309-0259-4d32-96ac-1b928be4fcd1)
+
 
 
 ## Screenshots
@@ -182,6 +184,18 @@ https://github.com/user-attachments/assets/16542309-0259-4d32-96ac-1b928be4fcd1
 
 ---
 
+
+
+
+
+## Contact Information
+
+- **GitHub Repository URL:** [Guest Room Booking Application](https://github.com/GKrizz/Guest_room_booking_application.git)
+- **Name:** Gobala Krishnan
+- **Email Address:** kbaskarankbaskaran72@gmail.com
+- **Phone Number:** +91 9345720171
+
+--- 
 
 
 
