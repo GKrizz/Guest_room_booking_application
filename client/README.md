@@ -1,70 +1,223 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Room Booking Application
 
-In the project directory, you can run:
+This guide will walk you through setting up and developing the Room Booking Application using React, Node.js, and MongoDB. Follow these steps to get started.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. [Frontend Setup](#frontend-setup)
+2. [Navbar Component](#navbar-component)
+3. [Backend Setup](#backend-setup)
+4. [Database Configuration](#database-configuration)
+5. [Creating Models](#creating-models)
+6. [API Integration](#api-integration)
+7. [Frontend-Backend Connection](#frontend-backend-connection)
+8. [Additional Features](#additional-features)
+9. [Authentication](#authentication)
+10. [Booking Functionality](#booking-functionality)
+11. [Payment Gateway Integration](#payment-gateway-integration)
+12. [Search and Filtering](#search-and-filtering)
+13. [Profile and Booking Management](#profile-and-booking-management)
+14. [Admin Panel](#admin-panel)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Frontend Setup
 
-### `npm test`
+1. **Create React Application**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npx create-react-app client
+   cd client
+   npm start
+   ```
 
-### `npm run build`
+2. **Install Dependencies**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - React Router and Axios for routing and API operations:
+     ```bash
+     npm install react-router-dom axios
+     ```
+   - React Bootstrap for UI components:
+     ```bash
+     npm install react-bootstrap
+     ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Navbar Component
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Create Navbar Component**
 
-### `npm run eject`
+   - Create `src/components/Navbar.js`.
+   - Use Bootstrap and React Bootstrap for styling.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Backend Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Initialize Node.js Project**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   mkdir server
+   cd server
+   npm init -y
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install Express**
 
-## Learn More
+   ```bash
+   npm install express
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Create Entry Point**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - Create `server.js`.
+   - Start server with:
+     ```bash
+     node server.js
+     ```
+   - For automatic server restarts, install and use Nodemon:
+     ```bash
+     npm install nodemon --save-dev
+     npx nodemon server.js
+     ```
 
-### Code Splitting
+## Database Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Set Up MongoDB**
 
-### Analyzing the Bundle Size
+   - Download MongoDB Compass.
+   - Create a new database and collections.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Install Mongoose**
 
-### Making a Progressive Web App
+   ```bash
+   npm install mongoose
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. **Configure Database**
 
-### Advanced Configuration
+   - Create `server/db.js` for database configuration.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Creating Models
 
-### Deployment
+1. **Room Model**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   - Create `models/room.js`:
+     - Define schema and model for rooms using Mongoose.
 
-### `npm run build` fails to minify
+2. **Add Static Data**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   - Add initial data to the Room collection.
+
+## API Integration
+
+1. **Set Up Express Router**
+
+   - Install Express Router:
+     ```bash
+     npm install express-router
+     ```
+   - Create `routes/roomsRoute.js` for room-related endpoints.
+
+2. **Test API Endpoints**
+
+   - Use Postman to verify API connectivity.
+
+## Frontend-Backend Connection
+
+1. **Configure Proxy**
+
+   - Add proxy to `client/package.json`:
+     ```json
+     "proxy": "http://localhost:5000/"
+     ```
+
+2. **Create Home Screen**
+
+   - Create `src/screens/Homescreen.js`.
+   - Install additional packages if needed.
+
+## Additional Features
+
+1. **Create Components**
+
+   - Create `src/components/Room.js` and `src/screens/Bookingscreen.js`.
+
+2. **Error, Success, and Loading Components**
+
+   - Create components in `src/components` and use Bootstrap alerts.
+
+## Authentication
+
+1. **Create User Model**
+
+   - Create `models/user.js` for user management.
+
+2. **Set Up Authentication Endpoints**
+
+   - Add registration and login endpoints in `routes/authRoutes.js`.
+
+3. **Frontend Integration**
+
+   - Create registration and login screens.
+   - Update routes in `src/App.js`.
+
+4. **Update Navbar**
+
+   - Display user status and name based on login.
+
+## Booking Functionality
+
+1. **Calendar Integration**
+
+   - Install Ant Design and Moment.js:
+     ```bash
+     npm install antd moment
+     ```
+   - Implement date selection and booking logic.
+
+2. **Create Booking Model**
+
+   - Create `models/booking.js` and `routes/bookingsRoute.js`.
+
+3. **Handle Room Availability**
+
+   - Filter out booked rooms based on selected dates.
+
+## Payment Gateway Integration
+
+1. **Set Up Stripe**
+
+   - Install Stripe packages:
+     ```bash
+     npm install react-stripe-checkout stripe uuid sweetalert2
+     ```
+   - Configure Stripe in `src/screens/Bookingscreen.js` and backend routes.
+
+2. **Style Payment Gateway**
+
+   - Customize payment UI and handle transactions.
+
+## Search and Filtering
+
+1. **Implement Search and Filtering**
+
+   - Add search and filtering options for room types (e.g., deluxe, non-deluxe).
+
+## Profile and Booking Management
+
+1. **Create Profile Screen**
+
+   - Create `src/screens/Profilescreen.js` for managing bookings and cancellations.
+
+2. **Handle Booking Cancellations**
+
+   - Add cancel booking functionality and update room availability.
+
+## Admin Panel
+
+1. **Create Admin Screen**
+
+   - Create `src/screens/Adminscreen.js` for admin functionalities.
+   - Include options to manage bookings, rooms, and users.
+
+2. **Implement Admin Logic**
+
+   - Add necessary logic in `routes/adminRoutes.js` and `Adminscreen.js`.
