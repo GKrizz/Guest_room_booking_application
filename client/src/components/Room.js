@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Button, Card, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function Room({ room,fromdate,todate }) {
+function Room({ room, fromdate, todate }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -13,10 +13,10 @@ function Room({ room,fromdate,todate }) {
       <Card className="shadow-sm border-2">
         <div className="row no-gutters">
           <div className="col-md-4">
-            <Card.Img 
-              src={room.imageurls[0]} 
-              alt={room.name} 
-              className="img-fluid rounded-left" 
+            <Card.Img
+              src={room.imageurls[0]}
+              alt={room.name}
+              className="img-fluid rounded-left"
               style={{ height: '100%', objectFit: 'cover' }}
             />
           </div>
@@ -32,16 +32,14 @@ function Room({ room,fromdate,todate }) {
               </Card.Text>
 
               <div className="mt-auto text-right">
-
-                {(fromdate && todate)&&(
-                    <Link to={`/book/${room._id}/${fromdate}/${todate}`}>
-                      <button className="btn btn-primary m-2">Book now</button>
-                    </Link>
+                {(fromdate && todate) && (
+                  <Link to={`/book/${room._id}/${fromdate}/${todate}`}>
+                    <button className="btn btn-primary m-2">Book now</button>
+                  </Link>
                 )}
                 
                 <Button className="btn btn-primary" onClick={handleShow}>View Details</Button>
               </div>
-              
             </Card.Body>
           </div>
         </div>
@@ -53,10 +51,9 @@ function Room({ room,fromdate,todate }) {
           <Modal.Title>{room.name} Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-
           {/* Carousel to display room images */}
           <Carousel>
-            {room.imageurls.map((url, index) => (
+            {room.imageurls && room.imageurls.map((url, index) => (
               <Carousel.Item key={index}>
                 <img
                   className="d-block w-100"
@@ -67,6 +64,7 @@ function Room({ room,fromdate,todate }) {
               </Carousel.Item>
             ))}
           </Carousel>
+
           <p><b>Description:</b> {room.description}</p>
           <p><b>Max Count:</b> {room.maxcount}</p>
           <p><b>Phone Number:</b> {room.phonenumber}</p>
